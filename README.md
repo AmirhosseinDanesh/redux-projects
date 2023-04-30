@@ -1,2 +1,2 @@
 # redux-projects
-some projects with redux exapmle counter , todo list
+some projects with redux exapmle counter , todo list with js
