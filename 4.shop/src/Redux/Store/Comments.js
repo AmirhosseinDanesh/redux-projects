@@ -1,4 +1,10 @@
-import { addComment , removeComment } from "./actionTypes.js"
+// Action Types
+const addComment = "ADD_COMMENT"
+const removeComment = "REMOVE_COMMENT"
+
+
+// Reducres
+
 export default (state = [] , action) =>{
     switch (action.type) {
         case addComment:{
@@ -12,5 +18,21 @@ export default (state = [] , action) =>{
         default : {
             return state
         }
+    }
+}
+
+
+// Action Creators
+
+export const addCommentAction = (data) =>{
+    return {
+        type : addComment , 
+        payload : data
+    }
+}
+export const removeCommentAction = (id) =>{
+    return {
+        type : removeComment , 
+        id
     }
 }

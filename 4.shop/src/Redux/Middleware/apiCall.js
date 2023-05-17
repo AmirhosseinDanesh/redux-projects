@@ -1,9 +1,8 @@
-import { getProductErrorAction, getProductSuccessAction } from "../Products/actionCreators";
-import { getProductStart } from "../Products/actionTypes";
+import {getProductStart ,getProductSuccessAction , getProductErrorAction} from "../Store/Products"
 
 const apiCall = ({ dispatch }) => (next) => (action) => {
     if (action.type !== getProductStart) {
-        next(action)
+        return next(action)
     } else {
         fetch(action.payload)
             .then((res) => res.json())

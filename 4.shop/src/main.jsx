@@ -2,17 +2,16 @@ import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
-import productReducer from "./Redux/Products/reducer.js"
-import commentreducer from "./Redux/Comments/reducer.js"
-import articleReducer from "./Redux/Articles/reducer.js"
+import productReducer from "./Redux/Store/Products.js"
+import commentreducer from "./Redux/Store/Comments.js"
+import articleReducer from "./Redux/Store/Articles.js"
 
-import { addProductAction, getProductStartAction } from "./Redux/Products/actionCreators.js"
-import { addArticleAction } from "./Redux/Articles/actionCreators.js"
-import { addCommentAction } from "./Redux/Comments/actionCreators.js"
+import { addProductAction, getProductStartAction } from "./Redux/Store/Products.js"
+import { addArticleAction } from "./Redux/Store/Articles.js"
+import { addCommentAction } from "./Redux/Store/Comments.js"
 
 import logger from './Redux/Middleware/logger.js'
 import apiCall from './Redux/Middleware/apiCall.js'
-import { getProductStart } from './Redux/Products/actionTypes.js'
 
 const store = Redux.createStore(
   Redux.combineReducers({
