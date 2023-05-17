@@ -1,4 +1,4 @@
-import { addProduct , removeProduct } from "./actionTypes.js";
+import { addProduct , removeProduct , getProductStart , getProductSuccess , getProductError} from "./actionTypes.js";
 
 const addProductAction = (data) =>{
     return {
@@ -12,6 +12,24 @@ const removeProductAction = (id) =>{
         id
     }
 }
+const getProductStartAction = (url) =>{
+    return {
+        type : getProductStart , 
+        payload : url
+    }
+}
+const getProductSuccessAction = (data) =>{
+    return {
+        type : getProductSuccess , 
+        payload : data
+    }
+}
+const getProductErrorAction = (error) =>{
+    return {
+        type : getProductError , 
+        payload : error
+    }
+}
 
 
-export { removeProductAction , addProductAction}
+export { removeProductAction , addProductAction , getProductErrorAction , getProductSuccessAction , getProductStartAction}
